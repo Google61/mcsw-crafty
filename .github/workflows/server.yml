@@ -31,7 +31,7 @@ jobs:
       - name: Setup server
         run: ./setup-auto-mc.sh
       - name: Setup tunnel
-        run: ./setup-tunnel.sh
+        run: sudo ./setup-tunnel.sh
       - name: Run server
         run: sudo ./install-crafty.sh
       - name: Upload artifact
