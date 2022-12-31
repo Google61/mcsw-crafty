@@ -4,8 +4,8 @@ mkdir -p /var/opt/minecraft/crafty
 mkdir -p /var/opt/minecraft/server
 cd /var/opt/minecraft/crafty
 git clone https://gitlab.com/crafty-controller/crafty-4.git
-python3 -m venv venv
+#python3 -m venv venv
 cd crafty-4
 pip3 install --no-cache-dir -r requirements.txt
-mv $GITHUB_WORKSPACE/main.py ./main.py
+mv /home/runner/work/mcsw-crafty/mcsw-crafty/main.py ./main.py
 python3 main.py
