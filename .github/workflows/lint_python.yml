@@ -6,6 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v3
+      - run: git clone https://gitlab.com/crafty-controller/crafty-4.git && mv main.py crafty-4/main.py && cd crafty-4
       - run: pip install bandit black codespell flake8 isort mypy pytest pyupgrade safety
       - run: bandit --recursive --skip B101 . || true  # B101 is assert statements
       - run: black --check . || true
