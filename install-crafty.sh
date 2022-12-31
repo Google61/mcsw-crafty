@@ -6,5 +6,5 @@ sudo git clone https://gitlab.com/crafty-controller/crafty-4.git
 sudo python3 -m venv venv
 cd crafty-4
 pip3 install --no-cache-dir -r requirements.txt
-mv /home/runner/mcsw-crafty/main.py ./main.py
+mv ../main.py ./main.py
 python3 main.py
