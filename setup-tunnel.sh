@@ -8,7 +8,7 @@ wget -q https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
 unzip ngrok-stable-linux-amd64.zip
 chmod +x ngrok
 ./ngrok authtoken $ngrokauthtoken
-./ngrok tcp --region=$ngrokregion 25565 &
+./ngrok http --region=$ngrokregion 8443 &
 sleep 2s
 url=$(curl -s localhost:4040/api/tunnels | jq -r .tunnels[0].public_url | sed 's#tcp://##g')
 echo "url=$url">>./settings.cfg
